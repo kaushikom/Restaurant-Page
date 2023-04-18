@@ -1,9 +1,12 @@
 import loadHome from './home';
+import loadContact from './contact';
+import loadMenu from './menu';
+let activeState = 'home';
 function loadSite() {
   const content = document.getElementById('content');
-
   content.appendChild(createNav());
   content.appendChild(createMain());
+  content.appendChild(createFooter());
 
   loadHome();
 }
@@ -17,20 +20,37 @@ function createNav() {
 
   const homeBtn = document.createElement('button');
   homeBtn.textContent = 'Home';
-  // create a function 'loadHome' which sets the main page's content to home.
-  // homeBtn.addEventListener('click', loadHome);
+  homeBtn.addEventListener('click', () => {
+    if (activeState == 'home') return;
+    else {
+      loadHome();
+      activeState = 'home';
+    }
+  });
   navbar.appendChild(homeBtn);
 
   const menuBtn = document.createElement('button');
   menuBtn.textContent = 'Menu';
-  // create a function 'loadMenu' which loads menu to the main page.
-  // menuBtn.addEventListener('click', loadMenu);
+
+  menuBtn.addEventListener('click', () => {
+    if (activeState == 'menu') return;
+    else {
+      loadMenu();
+      activeState = 'menu';
+    }
+  });
   navbar.appendChild(menuBtn);
 
   const contactBtn = document.createElement('button');
   contactBtn.textContent = 'Contact Us';
-  //create a function 'loadContact' which loads menu to the main page.
-  // contactBtn.addEventListener('click', loadContact);
+
+  contactBtn.addEventListener('click', () => {
+    if (activeState == 'contact') return;
+    else {
+      loadContact();
+      activeState = 'contact';
+    }
+  });
   navbar.appendChild(contactBtn);
 
   return navbar;
@@ -40,4 +60,11 @@ function createMain() {
   main.setAttribute('id', 'main');
   return main;
 }
+
+function createFooter() {
+  const footer = document.createElement('footer');
+  footer.innerHTML = 'Made By: <img src ="./images/github.png"> Om Kaushik ';
+  return footer;
+}
+
 loadSite();

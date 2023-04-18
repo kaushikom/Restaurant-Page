@@ -32,6 +32,7 @@ function createHome() {
 
 function loadHome() {
   const main = document.getElementById('main');
+  main.innerHTML = '';
   main.appendChild(createHome());
 }
 
