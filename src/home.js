@@ -5,7 +5,7 @@ function createHome() {
   textContent.classList.add('col');
 
   const heading = document.createElement('h1');
-  heading.textContent = "Not McDonald's";
+  heading.innerHTML = "Not <br> McDonald's";
 
   const para = document.createElement('p');
   para.textContent = 'Food that makes you happy.';

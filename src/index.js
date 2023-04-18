@@ -63,7 +63,7 @@ function createMain() {
 
 function createFooter() {
   const footer = document.createElement('footer');
-  footer.innerHTML = 'Made By: <img src ="./images/github.png"> Om Kaushik ';
+  footer.innerHTML = 'Made By:  <img src ="./images/github.png">  Om Kaushik ';
   return footer;
 }
 

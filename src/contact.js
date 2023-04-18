@@ -9,8 +9,7 @@ function createContact() {
 
   const addressDiv = document.createElement('div');
   addressDiv.classList.add('address');
-  addressDiv.textContent =
-    '📍 2834 N Ashland Ave, Chicago, IL 60657, United States';
+  addressDiv.innerHTML = '📍 2834 N Ashland Ave, Chicago, United States';
   contact.appendChild(addressDiv);
 
   const locationDiv = document.createElement('div');
