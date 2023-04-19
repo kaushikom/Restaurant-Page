@@ -27,7 +27,12 @@ body {
     background-color: var(--bg-color);
 min-height: 100vh;
 }
-
+#content{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 nav{
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.255);
     display: flex;
