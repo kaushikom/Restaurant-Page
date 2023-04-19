@@ -49,6 +49,7 @@ nav > button {
     font-weight: 700;
     cursor: pointer;
     margin-bottom: 0.25em;
+    outline: none;
 }
 
 main {
@@ -57,6 +58,7 @@ main {
     border-radius: 10px;
     padding: 0.25em 0.57em;
     max-width: 90%;
+     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.255);
 }
 
 .home h1 {
@@ -126,5 +128,57 @@ footer > img{
     font-size: 1.25rem;
 }
 .contact > div {
-    margin: 0.5em 0;
+    margin: 1.25em 0;
+}
+
+@media (min-width : 800px){
+    #content{
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    nav{
+        flex-direction: row;
+        align-items: center;
+    }
+   nav  button {
+    margin: 0 1.125em;
+    font-size: 1.75rem;
+    padding: 0.25em 0.5em;
+   }
+   nav > button:hover{
+    border-radius: 5px;
+    background-color: var(--primary-yellow);
+   }
+   nav span{
+   margin-right: auto;
+   margin-left: 0.5em;
+   margin-top: 0.5em;
+   font-size: 2.5rem;
+   }
+   .home{
+    display: flex;
+    justify-content: space-around;
+    padding: 3em 3em;
+    gap: 10vw;
+   }
+   .home h1 {
+    font-size: 4.5rem;
+}
+ .home p{
+    font-size: 2rem;
+ }
+ .home button{
+    font-size: 1.5rem;
+ }
+ 
+.menu{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+}
+.contact img{
+    max-height: 450px;
+    width: auto;
+}
 }
